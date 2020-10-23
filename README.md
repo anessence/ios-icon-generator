@@ -2,7 +2,7 @@
 
 ### Description
 ios-icon-generator is a shell script which aim to generate iOS/macOS/watchOS APP icons easier and simply.
-![image](https://github.com/smallmuou/ios-icon-generator/blob/master/ios-icon-generator.gif)
+![image](https://github.com/anessence/ios-icon-generator/blob/master/ios-icon-generator.gif)
 <pre>
 VERSION: 2.0.0
 USAGE:
@@ -26,7 +26,7 @@ EXAMPLE:
 
 1. Clone
 ```bash
-git clone https://github.com/smallmuou/ios-icon-generator
+git clone https://github.com/anessence/ios-icon-generator
 cd ios-icon-generator
 chmod 777 ios-icon-generator.sh
 ```
