@@ -195,21 +195,21 @@ EOF`
 
 OLD_IFS=$IFS
 IFS=$'\n'
-srgb_profile='/System/Library/ColorSync/Profiles/sRGB Profile.icc'
+p3_profile='/System/Library/ColorSync/Profiles/Display P3.icc'
 
 for line in $sizes_mapper
 do
     name=`echo $line|awk '{print $1}'`
     size=`echo $line|awk '{print $2}'`
     info "Generate $name.png ..."
-    if [ -f $srgb_profile ];then
-        sips --matchTo '/System/Library/ColorSync/Profiles/sRGB Profile.icc' -z $size $size $src_file --out $dst_path/$name.png >/dev/null 2>&1
+    if [ -f $p3_profile ];then
+        sips --matchTo '/System/Library/ColorSync/Profiles/Display P3.icc' -z $size $size $src_file --out $dst_path/$name.png >/dev/null 2>&1
     else
         sips -z $size $size $src_file --out $dst_path/$name.png >/dev/null
     fi
 done
 
-info "Congratulation. All icons for iOS/macOS/watchOS APP are generate to the directory: $dst_path."
+info "Congratulations! All icons for iOS/macOS/watchOS APP are generated to the directory: $dst_path."
 
 IFS=$OLD_IFS
 
